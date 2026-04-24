@@ -67,7 +67,7 @@ For review, debugging, or analysis requests, do not force code changes once find
 
 Use 2+ subagents or none. NEVER launch exactly 1 subagent.
 
-The main agent is a builder, not a dispatcher. Work first, delegate second. Use subagents proactively only when clear parallel decomposition already exists. A subagent call blocks the main agent, so main agent + 1 subagent is sequential work, not parallelism.
+The main agent is a builder, not a dispatcher. Work first, delegate second. Use subagents proactively, but only after main-agent scoping has clearly split the work into 2+ parallel independent tracks. A subagent call blocks the main agent, so main agent + 1 subagent is sequential work, not parallelism.
 
 - Scope the whole batch in the main agent before the first subagent call. If only one subagent task is ready, use zero subagents and keep scoping in the main agent.
 - Independence is execution independence, not shared final synthesis. If one track's findings decide what another track should inspect or how, keep scoping in the main agent.
