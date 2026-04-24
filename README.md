@@ -1,6 +1,8 @@
 # Anbeeld's Global AGENTS.md / CLAUDE.md
 
-A global instruction file for coding agents that fixes what they most commonly get wrong: jumping to code without evidence, expanding scope unchecked, or shipping changes that haven't been validated. Every instruction came from the same pipeline: observe what agents get wrong, compare it with public examples and recommendations from industry leaders, test my own solution when needed, then add or tighten a rule to close the gap.
+A global instruction file for coding agents that fixes what they most commonly get wrong: jumping to code without evidence, expanding scope unchecked, or shipping changes that haven't been validated.
+
+Every instruction came from the same pipeline: observe what agents get wrong, compare it with public examples and [recommendations from industry leaders](https://github.com/Anbeeld/AGENTS.md/commit/f796d26c30402dc0aab12cb02e9e448504047d98), test my own solution when needed, then add or tighten a rule.
 
 Battle-tested in daily use, tuned across multiple agents and models. Use the full set, borrow what you need, or build something different from it.
 
