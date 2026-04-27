@@ -26,14 +26,16 @@ One file, no dependencies. Copy [AGENTS.md](https://github.com/Anbeeld/AGENTS.md
 
 Personally I keep one canonical version of this file and use the sync scripts to copy it to each agent's expected config location, whether that agent calls it AGENTS.md or CLAUDE.md.
 
-Other options: symlinks, manual copies, or for Claude Code, writing `@AGENTS.md` inside your `CLAUDE.md` to import it directly (no script needed).
+Other options: symlinks, manual copies, or for Claude Code, writing `@AGENTS.md` inside your CLAUDE.md to import it directly (no script needed).
 
 ```bash
 ./scripts/sync.sh          # macOS / Linux
 ./scripts/sync.ps1         # Windows PowerShell
 ```
 
-Both support `--dry-run` / `-DryRun` and `--help` / `-Help`, and you can override the default target paths with flags. The default paths are whatever the agent tools themselves expect: `~/.config/opencode/AGENTS.md`, `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md` on macOS and Linux, with the script-detected Windows equivalents.
+Both support `--dry-run` / `-DryRun` and `--help` / `-Help`, and you can override the default target paths with per-tool flags (e.g. `--targets-gemini PATH`).
+
+The scripts cover most tools, harnesses, IDEs, and plugins that support global agent instructions, like Claude Code, Codex, OpenCode, and many others. For tools that read AGENTS.md at the project level instead, like Cursor or Windsurf, add the file to each repo manually.
 
 ## What I use it with
 

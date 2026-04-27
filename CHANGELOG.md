@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.2
+
+- Expanded sync scripts from 3 to 9 targets — added Amp, Goose, Gemini CLI, Roo Code, Kilo Code, Cline, and Augment Code. GitHub Copilot is covered via the existing Claude Code target.
+- Fixed PowerShell `Detect-Targets` scoping bug and removed broken `Assert-HasTargetArgs`. Fixed Codex and Claude Windows paths from `%APPDATA%` to `%USERPROFILE%`.
+- Fixed bash `set -e` exit in `detect_targets` and `set -u` compatibility with empty arrays on macOS bash 3.2.
+
 ## v1.1.1
 
 - Changed bundling rule in Uncertainty to "When bundling, ensure each question can be answered independently" — fixes failure where related points bundled into a tool call that only returned one answer.
