@@ -84,39 +84,39 @@ function Show-Help {
 }
 
 function Detect-Targets {
-    $home = $env:USERPROFILE
-    if (-not $home) { $home = $env:HOME }
-    if (-not $home) {
+    $HomeDir = $env:USERPROFILE
+    if (-not $HomeDir) { $HomeDir = $env:HOME }
+    if (-not $HomeDir) {
         Write-Error "Could not determine the home directory from USERPROFILE or HOME."
         exit 1
     }
 
-    if (Test-Path (Join-Path $home ".config\opencode")) {
-        $script:AgentsTargets += Join-Path $home ".config\opencode\AGENTS.md"
+    if (Test-Path (Join-Path $HomeDir ".config\opencode")) {
+        $script:AgentsTargets += Join-Path $HomeDir ".config\opencode\AGENTS.md"
     }
-    if (Test-Path (Join-Path $home ".codex")) {
-        $script:AgentsTargets += Join-Path $home ".codex\AGENTS.md"
+    if (Test-Path (Join-Path $HomeDir ".codex")) {
+        $script:AgentsTargets += Join-Path $HomeDir ".codex\AGENTS.md"
     }
-    if (Test-Path (Join-Path $home ".config\amp")) {
-        $script:AgentsTargets += Join-Path $home ".config\amp\AGENTS.md"
+    if (Test-Path (Join-Path $HomeDir ".config\amp")) {
+        $script:AgentsTargets += Join-Path $HomeDir ".config\amp\AGENTS.md"
     }
-    if (Test-Path (Join-Path $home ".config\goose")) {
-        $script:AgentsTargets += Join-Path $home ".config\goose\AGENTS.md"
+    if (Test-Path (Join-Path $HomeDir ".config\goose")) {
+        $script:AgentsTargets += Join-Path $HomeDir ".config\goose\AGENTS.md"
     }
-    if (Test-Path (Join-Path $home ".claude")) {
-        $script:ClaudeTargets += Join-Path $home ".claude\CLAUDE.md"
+    if (Test-Path (Join-Path $HomeDir ".claude")) {
+        $script:ClaudeTargets += Join-Path $HomeDir ".claude\CLAUDE.md"
     }
-    if (Test-Path (Join-Path $home ".gemini")) {
-        $script:GeminiTargets += Join-Path $home ".gemini\GEMINI.md"
+    if (Test-Path (Join-Path $HomeDir ".gemini")) {
+        $script:GeminiTargets += Join-Path $HomeDir ".gemini\GEMINI.md"
     }
-    if (Test-Path (Join-Path $home ".roo")) {
-        $script:RulesDirTargets += Join-Path $home ".roo\rules\AGENTS.md"
+    if (Test-Path (Join-Path $HomeDir ".roo")) {
+        $script:RulesDirTargets += Join-Path $HomeDir ".roo\rules\AGENTS.md"
     }
-    if (Test-Path (Join-Path $home ".augment")) {
-        $script:RulesDirTargets += Join-Path $home ".augment\rules\AGENTS.md"
+    if (Test-Path (Join-Path $HomeDir ".augment")) {
+        $script:RulesDirTargets += Join-Path $HomeDir ".augment\rules\AGENTS.md"
     }
-    if (Test-Path (Join-Path $home "Documents\Cline")) {
-        $script:RulesDirTargets += Join-Path $home "Documents\Cline\Rules\AGENTS.md"
+    if (Test-Path (Join-Path $HomeDir "Documents\Cline")) {
+        $script:RulesDirTargets += Join-Path $HomeDir "Documents\Cline\Rules\AGENTS.md"
     }
 }
 

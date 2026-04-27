@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.3
+
+- Fixed `sync.ps1` crash caused by overwriting read-only `$HOME`.
+
 ## v1.1.2
 
 - Expanded sync scripts from 3 to 9 targets — added Amp, Goose, Gemini CLI, Roo Code, Kilo Code, Cline, and Augment Code. GitHub Copilot is covered via the existing Claude Code target.
