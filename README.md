@@ -8,14 +8,6 @@ Battle-tested in daily use, tuned across multiple agents and models. Use the ful
 
 [![Support my work!](https://anbeeld.com/images/support.jpg)](https://anbeeld.com/support)
 
-## What I use it with
-
-The rules work with any agent that reads AGENTS.md or CLAUDE.md, because every coding agent benefits from explicit priorities, evidence-first execution, small scoped changes, and validated completions. I use Codex, Claude, Gemini, and a number of open weight models through OpenCode, and they all work well with these rules.
-
-They're especially useful with models like GLM, Kimi, MiniMax that tend to work sequentially, avoid parallelization, and skip evidence-gathering steps that a frontier model might do on its own. The explicitness compensates for tooling instincts that aren't always built in. Better parallelization can lead to faster execution and deeper analysis from independent tracks exploring different parts of the problem.
-
-Nothing in the file is harness-specific or model-specific. Some rules may be redundant with certain model/harness combinations, but they shouldn't create outright conflicts.
-
 ## What it does
 
 - No wrong-path work: asks before guessing on ambiguous tasks, investigates proportionally to risk, and doesn't improvise when goals conflict.
@@ -30,7 +22,7 @@ Nothing in the file is harness-specific or model-specific. Some rules may be red
 
 ## How to use it
 
-One file, no dependencies. Copy AGENTS.md to your agent's config directory and you're done.
+One file, no dependencies. Copy [AGENTS.md](https://github.com/Anbeeld/AGENTS.md/blob/main/AGENTS.md) to your agent's config directory and you're done.
 
 Personally I keep one canonical version of this file and use the sync scripts to copy it to each agent's expected config location, whether that agent calls it AGENTS.md or CLAUDE.md.
 
@@ -42,6 +34,14 @@ Other options: symlinks, manual copies, or for Claude Code, writing `@AGENTS.md`
 ```
 
 Both support `--dry-run` / `-DryRun` and `--help` / `-Help`, and you can override the default target paths with flags. The default paths are whatever the agent tools themselves expect: `~/.config/opencode/AGENTS.md`, `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md` on macOS and Linux, with the script-detected Windows equivalents.
+
+## What I use it with
+
+The rules work with any agent that reads AGENTS.md or CLAUDE.md, because every coding agent benefits from explicit priorities, evidence-first execution, small scoped changes, and validated completions. I use Codex, Claude, Gemini, and a number of open weight models through OpenCode, and they all work well with these rules.
+
+They're especially useful with models like GLM, Kimi, MiniMax that tend to work sequentially, avoid parallelization, and skip evidence-gathering steps that a frontier model might do on its own. The explicitness compensates for tooling instincts that aren't always built in. Better parallelization can lead to faster execution and deeper analysis from independent tracks exploring different parts of the problem.
+
+Nothing in the file is harness-specific or model-specific. Some rules may be redundant with certain model/harness combinations, but they shouldn't create outright conflicts.
 
 ## See also
 
