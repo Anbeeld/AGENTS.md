@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.1
+
+- Changed bundling rule in Uncertainty to "When bundling, ensure each question can be answered independently" — fixes failure where related points bundled into a tool call that only returned one answer.
+- Converted Uncertainty example from instruction format to demonstration format for stronger pattern matching.
+
 ## v1.1.0
 
 - Reduced length by ~600 characters.
