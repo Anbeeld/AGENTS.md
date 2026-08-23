@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.1
+
+- Added Workflow step 3 requiring the task/TODO tool to be maintained as the live task plan for non-trivial work.
+- Added Completion bullet requiring task/TODO plan reconciliation with actual execution before declaring completion.
+
 ## v1.2.0
 
 - Made `Boundaries` invariant at the global layer and expanded them with explicit authority, secret-handling, destructive-action approval, and untrusted-instruction rules.

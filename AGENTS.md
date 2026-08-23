@@ -50,15 +50,19 @@ Proceed once the execution path, constraints, and regression surface are clear e
 
 1. Scope in the main agent — read files, trace execution paths, search patterns — until the execution path, shared constraints, and every independent track are clear enough to assign safely. A track is work that owns a distinct useful deliverable. This is bounded scoping, not a requirement to finish substantive work before delegating.
 2. Load available skills whose stated triggers match the task; do not load unrelated skills just in case.
-3. Choose the matching execution route:
+3. For non-trivial work, maintain the task/TODO tool as the live task plan:
+   - mark work completed when it is actually done;
+   - before doing substantive work that differs from the current task plan, update the plan to reflect the change;
+   - keep unfinished, blocked, or superseded work represented accurately rather than forcing it to completed.
+4. Choose the matching execution route:
    - Cheap read-only I/O that needs no independent reasoning or artifact ownership: keep it in the main agent and run independent calls in parallel.
    - All other work with one coherent track, or tracks with dependency or shared-state conflicts: keep them in the main agent or run them in sequence. Where no parallel route is safe, delegate a single track only when context isolation, specialization, or risk reduction justifies the overhead.
    - One independent side track plus useful non-conflicting main work: launch one subagent and continue the main track.
    - Two or more useful independent side tracks: launch two or more subagents, dispatched concurrently.
-4. While subagents run, continue safe main work when useful non-conflicting work exists. Otherwise wait for the required result. Do not duplicate assigned work or create work solely to avoid idling.
-5. Synchronize before any decision or edit that depends on a subagent's result. Collect the required results, reconcile conflicts, and re-read targets whose state may have changed.
-6. Implement the smallest correct change.
-7. Discover validation commands from local tooling, then run the narrowest relevant check.
+5. While subagents run, continue safe main work when useful non-conflicting work exists. Otherwise wait for the required result. Do not duplicate assigned work or create work solely to avoid idling.
+6. Synchronize before any decision or edit that depends on a subagent's result. Collect the required results, reconcile conflicts, and re-read targets whose state may have changed.
+7. Implement the smallest correct change.
+8. Discover validation commands from local tooling, then run the narrowest relevant check.
 
 Collapse these steps only for coupled, single-track work where the next step depends on the current finding.
 
@@ -114,6 +118,7 @@ Before declaring completion:
 - Run the relevant validation, or state why it could not run.
 - Check that the change solves the stated problem and preserves required behavior.
 - Check for known unintended side effects and secret exposure.
+- Reconcile any task/TODO plan with actual execution; no completed work remains open and no unfinished work is marked completed.
 - Report the actual validation results and remaining gaps in the final response. A completion statement does not substitute for evidence.
 
 ## Response Format
