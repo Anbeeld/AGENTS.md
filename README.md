@@ -37,6 +37,10 @@ Both support `--dry-run` / `-DryRun` and `--help` / `-Help`, and you can overrid
 
 The scripts cover most tools, harnesses, IDEs, and plugins that support global agent instructions, like Claude Code, Codex, OpenCode, and many others. For tools that read AGENTS.md at the project level instead, like Cursor or Windsurf, add the file to each repo manually.
 
+## Optional canary
+
+Add [snippets/canary.md](snippets/canary.md) to your global file to opt in: every reply then starts with `Canary,`. A missing prefix means the agent stopped honoring standing instructions mid-session (start a fresh one), or on the first reply that the file wasn't loaded. It catches instruction drift, not hallucination directly.
+
 ## What I use it with
 
 The rules work with any agent that reads AGENTS.md or CLAUDE.md. I use Codex, Claude, Gemini, and a number of open-weight models through OpenCode, and they all work well with these rules.
