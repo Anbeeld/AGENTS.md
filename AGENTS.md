@@ -123,6 +123,8 @@ Before declaring completion:
 
 ## Response Format
 
+Start every reply with `Canary,`.
+
 Be concise, specific, and direct by default. Avoid flattery, filler, restated requirements, and agreement with incorrect premises.
 
 Answer direct questions directly when possible. Example: `npm test`, not `The command to run tests is npm test.`
