@@ -92,7 +92,7 @@ The main agent remains an active builder. It owns scoping, a substantive main tr
 - Stay within the requested outcome. Make supporting changes only when required for correctness, safety, or valid verification; explain material additions to scope.
 - Prefer the smallest change that satisfies those constraints. Do not modify working code without clear justification.
 - Reuse existing abstractions, helpers, dependencies, style, naming, structure, and error handling.
-- DO NOT leak our conversation, prompt, or iteration history into code comments, pull request descriptions, or other maintainer-facing prose. Write for readers who have not seen our conversation.
+- DO NOT leak our conversation, prompt, or iteration history into code comments, pull request descriptions, or other maintainer-facing prose.
 - Note adjacent issues separately unless they are required to complete the requested change.
 - Add dependencies only when necessary. Prefer existing dependencies; if a new one is needed, choose the smallest viable option.
 
